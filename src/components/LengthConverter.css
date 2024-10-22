@@ -1,0 +1,45 @@
+/* src/components/LengthConverter.css */
+
+.length-converter-container {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Optional: max width for better layout */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    border: 1px solid #ccc; /* Optional: border around the container */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.length-converter-container h1 {
+    text-align: center; /* Center the title */
+}
+
+.length-converter-container input,
+.length-converter-container select,
+.length-converter-container button {
+    width: 100%; /* Full width for inputs and buttons */
+    padding: 10px; /* Padding for better touch targets */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.convert-button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+.clear-button {
+    background-color: #dc3545; /* Clear button color */
+    color: white; /* Clear button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.length-converter-container button:hover {
+    background-color: #e0a800; /* Darker button color on hover */
+}
+
+.converted-lengths {
+    margin-top: 20px; /* Space above the converted results */
+}

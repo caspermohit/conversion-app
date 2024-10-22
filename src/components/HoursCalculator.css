@@ -1,0 +1,94 @@
+/* src/components/HourConverter.css */
+
+.hour-converter-container {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Optional: max width for better layout */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    border: 1px solid #ccc; /* Optional: border around the container */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.hour-converter-container h1 {
+    text-align: center; /* Center the title */
+}
+
+.hour-converter-container input,
+.hour-converter-container select,
+.hour-converter-container button {
+    width: 100%; /* Full width for inputs and buttons */
+    padding: 10px; /* Padding for better touch targets */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.hour-converter-container button {
+    background-color: #17a2b8; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.hour-converter-container button:hover {
+    background-color: #138496; /* Darker button color on hover */
+}
+
+.converted-hours {
+    margin-top: 20px; /* Space above the converted results */
+}
+
+.hours-calculator-container {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hours-calculator-container h1 {
+    margin-bottom: 20px;
+}
+
+.hours-calculator-container input[type="time"],
+.hours-calculator-container input[type="number"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px; /* Adjust width as needed */
+    font-size: 16px;
+}
+
+.hours-calculator-container button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hours-calculator-container button:hover {
+    background-color: #0056b3;
+}
+
+.hours-calculator-container div {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.hours-calculator-container div.total {
+    font-weight: bold;
+}
+
+.total-hours,
+.total-pay {
+    margin-top: 20px;
+    font-weight: bold;
+}

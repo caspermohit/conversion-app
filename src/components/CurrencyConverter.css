@@ -1,0 +1,62 @@
+/* src/components/CurrencyConverter.css */
+
+.currency-converter-container {
+    width: 100%; /* Full width */
+    max-width: 600px; /* Optional: max width for better layout */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    border: 1px solid #ccc; /* Optional: border around the container */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.currency-converter-container h2 {
+    text-align: center; /* Center the title */
+    color: #333; /* Darker text color for the title */
+}
+
+.currency-converter-container input,
+.currency-converter-container select,
+.currency-converter-container button {
+    width: 100%; /* Full width for inputs and buttons */
+    padding: 10px; /* Padding for better touch targets */
+    margin: 10px 0; /* Margin for spacing */
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 16px; /* Font size for better readability */
+}
+
+.currency-converter-container button {
+    background-color: #007bff; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.currency-converter-container button:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+}
+
+.converted-amount {
+    margin-top: 20px; /* Space above the converted results */
+    font-weight: bold; /* Bold text for emphasis */
+    text-align: center; /* Center the converted amount */
+}
+
+/* Assuming your container has a class of 'container' */
+.container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack divs vertically */
+    padding: 20px; /* Add some padding */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+.container div {
+    margin: 10px 0; /* Space between divs */
+    padding: 15px; /* Padding inside each div */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff; /* White background for each div */
+}

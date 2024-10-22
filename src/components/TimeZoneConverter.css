@@ -1,0 +1,18 @@
+.timezone-converter-container {
+   
+}
+
+.map-container {
+    width: 100%; /* Full width */
+    max-width: 800px; /* Optional: max width for better layout */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Padding around the container */
+    border: 1px solid #ccc; /* Optional: border around the container */
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional: shadow for depth */
+}
+
+.map {
+    height: 50%; /* Full height of the container */
+    width: 50%; /* Full width of the container */
+}
