@@ -1,6 +1,7 @@
 // Basic Calculator Component
 import React, { useState } from 'react';
 import './BasicCalculator.css'; // Import the CSS file
+import { evaluate } from 'mathjs'; // Import mathjs for safe evaluation
 
 const BasicCalculator = () => {
     const [input, setInput] = useState('');
@@ -9,8 +10,8 @@ const BasicCalculator = () => {
 
     const calculateResult = () => {
         try {
-            // Evaluate the expression
-            const evalResult = eval(input); // Use eval with caution
+            // Evaluate the expression using mathjs
+            const evalResult = evaluate(input); // Use mathjs instead of eval
             setResult(evalResult);
             // Update history
             setHistory([...history, `${input} = ${evalResult}`]);
