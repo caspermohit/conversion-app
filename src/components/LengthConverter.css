@@ -24,20 +24,16 @@
     border-radius: 4px; /* Rounded corners */
 }
 
-.convert-button {
-    background-color: #007bff; /* Button color */
-    color: white; /* Button text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
-}
+.convert-button,
 .clear-button {
-    background-color: #dc3545; /* Clear button color */
-    color: white; /* Clear button text color */
-    cursor: pointer; /* Pointer cursor on hover */
+    background-color: #007bff; /* Same color for both buttons */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .length-converter-container button:hover {
-    background-color: #e0a800; /* Darker button color on hover */
+    background-color: #0056b3; /* Darker shade on hover for both buttons */
 }
 
 .converted-lengths {
@@ -50,10 +46,11 @@
     border: 1px solid #444;
 }
 
-.dark-mode .convert-button {
-    background-color: #0056b3;
+.dark-mode .convert-button,
+.dark-mode .clear-button {
+    background-color: #0056b3; /* Same color for both buttons in dark mode */
 }
 
-.dark-mode .clear-button {
-    background-color: #b71c1c;
+.dark-mode .length-converter-container button:hover {
+    background-color: #003d80; /* Darker shade on hover for both buttons in dark mode */
 }

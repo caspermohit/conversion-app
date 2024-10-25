@@ -6,6 +6,15 @@ function VolumeConverter() {
     const [unit, setUnit] = useState('ml');
     const [convertedVolumes, setConvertedVolumes] = useState({});
 
+    // Custom function to format numbers
+    const formatNumber = (num) => {
+        if (num >= 0.001 || num === 0) {
+            return num.toFixed(3);
+        } else {
+            return num.toExponential(2);
+        }
+    };
+
     const convertVolume = () => {
         const value = parseFloat(volume);
         if (isNaN(value) || volume.trim() === '') {
@@ -31,13 +40,13 @@ function VolumeConverter() {
         }
 
         setConvertedVolumes({
-            ml: converted.ml.toFixed(2),
-            l: converted.l.toFixed(2),
-            kl: converted.kl.toFixed(6),
-            cm3: converted.cm3.toFixed(2),
-            'fl. oz.': converted['fl. oz.'].toFixed(2),
-            gal: converted.gal.toFixed(6),
-            pt: converted.pt.toFixed(6),
+            ml: formatNumber(converted.ml),
+            l: formatNumber(converted.l),
+            kl: formatNumber(converted.kl),
+            cm3: formatNumber(converted.cm3),
+            'fl. oz.': formatNumber(converted['fl. oz.']),
+            gal: formatNumber(converted.gal),
+            pt: formatNumber(converted.pt),
         });
     };
 

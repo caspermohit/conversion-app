@@ -11,9 +11,14 @@
     background-color: #f9f9f9; /* Light background color */
 }
 
-.currency-converter-container h2 {
+.currency-converter-container h1 {
     text-align: center; /* Center the title */
-    color: #333; /* Darker text color for the title */
+    color: #333; /* Dark color for light mode */
+}
+
+/* Add this new rule for dark mode */
+.dark-mode .currency-converter-container h1 {
+    color: #fff; /* Light color for dark mode */
 }
 
 .currency-converter-container input,

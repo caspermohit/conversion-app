@@ -9,6 +9,7 @@ import WeightConverter from './components/WeightConverter';
 import AreaConverter from './components/AreaConverter'; 
 import BasicCalculator from './components/BasicCalculator';
 import DarkModeToggle from './components/DarkModeToggle'; // Import the toggle component
+import Footer from './components/Footer';
 import './App.css';
 // Import other converters...
 
@@ -53,6 +54,7 @@ const App = () => {
                 {activeTab === 'Volume' && <VolumeConverter />}
                 {activeTab === 'Weight' && <WeightConverter />}
                 {activeTab === 'Area' && <AreaConverter />}
+                <Footer />
             </div>
         </div>
     );

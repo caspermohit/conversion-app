@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* or whichever your global CSS file is */
+
+body.dark-mode,
+.dark-mode .app {
+    background-color: #333;
+    color: #fff;
+}
+
+/* This ensures all text is visible in dark mode unless specifically styled otherwise */
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode p {
+    color: #fff;
+}

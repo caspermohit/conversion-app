@@ -24,7 +24,7 @@ const CurrencyConverter = () => {
 
     return (
         <div className="currency-converter-container">
-            <h2>Currency Converter</h2>
+            <h1>Currency Converter</h1>
             <input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
             <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
                 {Object.keys(rates).map((currency) => (
