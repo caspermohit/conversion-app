@@ -33,7 +33,10 @@ const CalendarConverter = () => {
                 result = date.format('jD jMMMM jYYYY');
                 break;
             case 'islamic':
-                result = date.format('iD iMMMM iYYYY');
+                const islamicDay = date.format('iD');
+                const islamicMonth = date.format('iMMMM');
+                const islamicYear = date.format('iYYYY');
+                result = `${islamicDay} ${islamicMonth} ${islamicYear}AH`;
                 break;
             case 'japanese':
                 result = date.format('YYYY [Japanese Imperial]');
@@ -56,7 +59,7 @@ const CalendarConverter = () => {
 
     return (
         <div className="date-converter-container">
-            <h1>Gregorian to Other Calendars Converter</h1>
+            <h1>Gregorian to Other Calendars Converter (beta)</h1>
             <input
                 type="date"
                 value={gregorianDate}

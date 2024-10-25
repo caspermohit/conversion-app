@@ -34,7 +34,7 @@ const App = () => {
             <div className="tab">
                 <button className={`tablinks ${activeTab === 'Basic' ? 'active' : ''}`} onClick={() => handleTabClick('Basic')}>Calculator</button>
                 <button className={`tablinks ${activeTab === 'Currency' ? 'active' : ''}`} onClick={() => handleTabClick('Currency')}>Currency Converter</button>
-                <button className={`tablinks ${activeTab === 'Date' ? 'active' : ''}`} onClick={() => handleTabClick('Date')}>Date Converter</button>
+                <button className={`tablinks ${activeTab === 'Date' ? 'active' : ''}`} onClick={() => handleTabClick('Date')}>Date Converter(beta)</button>
                 <button className={`tablinks ${activeTab === 'Hours' ? 'active' : ''}`} onClick={() => handleTabClick('Hours')}>Hours Calculator</button>
                 <button className={`tablinks ${activeTab === 'Length' ? 'active' : ''}`} onClick={() => handleTabClick('Length')}>Length Converter</button>
                 <button className={`tablinks ${activeTab === 'Temperature' ? 'active' : ''}`} onClick={() => handleTabClick('Temperature')}>Temperature Converter</button>
