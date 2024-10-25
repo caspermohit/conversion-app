@@ -16,23 +16,30 @@ function AreaConverter() {
         }
 
         const conversions = {
-            m2: value,
-            cm2: value * 10000, // 1 m² = 10,000 cm²
-            mm2: value * 1000000, // 1 m² = 1,000,000 mm²
-            km2: value / 1000000, // 1 m² = 0.000001 km²
-            ft2: value * 10.7639, // 1 m² = 10.7639 ft²
-            yd2: value * 1.19599, // 1 m² = 1.19599 yd²
-            mi2: value / 2589988.11 // 1 m² = 0.000000386102 mi²
+            m2: 1,
+            cm2: 10000, // 1 m² = 10,000 cm²
+            mm2: 1000000, // 1 m² = 1,000,000 mm²
+            km2: 0.000001, // 1 m² = 0.000001 km²
+            ft2: 10.7639, // 1 m² = 10.7639 ft²
+            yd2: 1.19599, // 1 m² = 1.19599 yd²
+            mi2: 0.000000386102 // 1 m² = 0.000000386102 mi²
         };
 
+        // Convert based on the selected unit
+        const baseValueInM2 = value / conversions[unit];
+        const converted = {};
+        for (const [key, conversionFactor] of Object.entries(conversions)) {
+            converted[key] = baseValueInM2 * conversionFactor;
+        }
+
         setConvertedAreas({
-            m2: conversions.m2.toFixed(2),
-            cm2: conversions.cm2.toFixed(2),
-            mm2: conversions.mm2.toFixed(2),
-            km2: conversions.km2.toFixed(6),
-            ft2: conversions.ft2.toFixed(2),
-            yd2: conversions.yd2.toFixed(2),
-            mi2: conversions.mi2.toFixed(8),
+            m2: converted.m2.toFixed(2),
+            cm2: converted.cm2.toFixed(2),
+            mm2: converted.mm2.toFixed(2),
+            km2: converted.km2.toFixed(6),
+            ft2: converted.ft2.toFixed(2),
+            yd2: converted.yd2.toFixed(2),
+            mi2: converted.mi2.toFixed(8),
         });
         setErrorMessage(''); // Clear any previous error messages
     };

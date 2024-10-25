@@ -56,3 +56,17 @@
     text-align: center; /* Center the error message */
     margin-top: 10px; /* Margin for spacing */
 }
+
+.dark-mode .temperature-converter-container {
+    background-color: #333;
+    color: #f9f9f9;
+    border: 1px solid #444;
+}
+
+.dark-mode .convert-button {
+    background-color: #0056b3;
+}
+
+.dark-mode .clear-button {
+    background-color: #b71c1c;
+}

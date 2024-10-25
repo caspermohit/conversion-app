@@ -48,3 +48,28 @@
     color: red;
     font-weight: bold;
 }
+
+.dark-mode .date-converter-container {
+    background-color: #333; /* Dark background */
+    color: #f9f9f9; /* Light text color */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode .date-converter-container input[type="date"],
+.dark-mode .date-converter-container select {
+    background-color: #444; /* Dark input background */
+    color: #f9f9f9; /* Light text color */
+    border: 1px solid #555; /* Darker border */
+}
+
+.dark-mode .date-converter-container button {
+    background-color: #0056b3; /* Darker button color */
+}
+
+.dark-mode .date-converter-container button:hover {
+    background-color: #003f7f; /* Even darker shade on hover */
+}
+
+.dark-mode .date-converter-container p {
+    color: #f9f9f9; /* Light text color */
+}

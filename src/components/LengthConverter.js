@@ -11,20 +11,21 @@ function LengthConverter() {
         if (isNaN(value)) return;
 
         const conversions = {
-            mm: value,
-            cm: value / 10,
-            m: value / 1000,
-            km: value / 1000000,
-            ft: value / 304.8, // 1 foot = 304.8 mm
-            yd: value / 914.4, // 1 yard = 914.4 mm
-            in: value / 25.4,  // 1 inch = 25.4 mm
-            mi: value / 1609344 // 1 mile = 1,609,344 mm
+            mm: 1,
+            cm: 10,
+            m: 1000,
+            km: 1000000,
+            ft: 304.8, // 1 foot = 304.8 mm
+            yd: 914.4, // 1 yard = 914.4 mm
+            in: 25.4,  // 1 inch = 25.4 mm
+            mi: 1609344 // 1 mile = 1,609,344 mm
         };
 
         // Convert based on the selected unit
+        const baseValueInMm = value * conversions[unit];
         const converted = {};
         for (const [key, conversionFactor] of Object.entries(conversions)) {
-            converted[key] = conversionFactor * (unit === 'mm' ? 1 : conversions[unit]);
+            converted[key] = baseValueInMm / conversionFactor;
         }
 
         setConvertedLengths(converted);

@@ -16,21 +16,28 @@ function WeightConverter() {
         }
 
         const conversions = {
-            mg: value * 1000, // 1 g = 1000 mg
-            g: value,
-            kg: value / 1000, // 1 kg = 1000 g
-            oz: value * 0.03527396, // 1 g = 0.03527396 oz
-            lb: value * 0.002204623, // 1 g = 0.002204623 lb
-            ton: value * 0.00000110231 // 1 g = 0.00000110231 ton
+            mg: 1,
+            g: 1000,
+            kg: 1000000,
+            oz: 28349.5, // 1 oz = 28,349.5 mg
+            lb: 453592, // 1 lb = 453,592 mg
+            ton: 907184740 // 1 ton = 907,184,740 mg
         };
 
+        // Convert based on the selected unit
+        const baseValueInMg = value * conversions[unit];
+        const converted = {};
+        for (const [key, conversionFactor] of Object.entries(conversions)) {
+            converted[key] = baseValueInMg / conversionFactor;
+        }
+
         setConvertedWeights({
-            mg: conversions.mg.toFixed(2),
-            g: conversions.g.toFixed(2),
-            kg: conversions.kg.toFixed(6),
-            oz: conversions.oz.toFixed(2),
-            lb: conversions.lb.toFixed(6),
-            ton: conversions.ton.toFixed(8),
+            mg: converted.mg.toFixed(2),
+            g: converted.g.toFixed(2),
+            kg: converted.kg.toFixed(6),
+            oz: converted.oz.toFixed(2),
+            lb: converted.lb.toFixed(6),
+            ton: converted.ton.toFixed(8),
         });
         setErrorMessage(''); // Clear any previous error messages
     };

@@ -14,23 +14,30 @@ function VolumeConverter() {
         }
 
         const conversions = {
-            ml: value,
-            l: value / 1000,
-            kl: value / 1000000,
-            cm3: value, // 1 ml = 1 cm³
-            'fl. oz.': value * 0.033814, // 1 ml = 0.033814 fl. oz.
-            gal: (value / 3785.41).toFixed(6), // 1 gal = 3785.41 ml
-            pt: value * 0.00211338 // 1 ml = 0.00211338 pt
+            ml: 1,
+            l: 1000,
+            kl: 1000000,
+            cm3: 1, // 1 ml = 1 cm³
+            'fl. oz.': 29.5735, // 1 fl. oz. = 29.5735 ml
+            gal: 3785.41, // 1 gal = 3785.41 ml
+            pt: 473.176 // 1 pt = 473.176 ml
         };
 
+        // Convert based on the selected unit
+        const baseValueInMl = value * conversions[unit];
+        const converted = {};
+        for (const [key, conversionFactor] of Object.entries(conversions)) {
+            converted[key] = baseValueInMl / conversionFactor;
+        }
+
         setConvertedVolumes({
-            ml: conversions.ml.toFixed(2),
-            l: conversions.l.toFixed(2),
-            kl: conversions.kl.toFixed(6),
-            cm3: conversions.cm3.toFixed(2),
-            'fl. oz.': conversions['fl. oz.'].toFixed(2),
-            gal: conversions.gal,
-            pt: conversions.pt.toFixed(6),
+            ml: converted.ml.toFixed(2),
+            l: converted.l.toFixed(2),
+            kl: converted.kl.toFixed(6),
+            cm3: converted.cm3.toFixed(2),
+            'fl. oz.': converted['fl. oz.'].toFixed(2),
+            gal: converted.gal.toFixed(6),
+            pt: converted.pt.toFixed(6),
         });
     };
 

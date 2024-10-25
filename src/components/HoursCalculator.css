@@ -39,8 +39,12 @@
 }
 
 .hours-calculator-container {
-    text-align: center;
-    margin: 20px;
+    display: flex;
+    flex-direction: column; /* Arrange children in a column */
+    align-items: center; /* Center align items */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -54,17 +58,18 @@
 
 .hours-calculator-container input[type="time"],
 .hours-calculator-container input[type="number"] {
+    width: 100%; /* Full width for inputs */
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 4px;
-    width: 200px; /* Adjust width as needed */
     font-size: 16px;
 }
 
 .hours-calculator-container button {
+    width: 100%; /* Full width for buttons */
     padding: 10px 15px;
-    margin: 10px 5px;
+    margin: 10px 0;
     border: none;
     border-radius: 4px;
     background-color: #007bff;
@@ -91,4 +96,21 @@
 .total-pay {
     margin-top: 20px;
     font-weight: bold;
+}
+
+.dark-mode .hour-converter-container,
+.dark-mode .hours-calculator-container {
+    background-color: #333; /* Dark background */
+    color: #f9f9f9; /* Light text color */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode .hour-converter-container button,
+.dark-mode .hours-calculator-container button {
+    background-color: #0056b3; /* Darker button color */
+}
+
+.dark-mode .hour-converter-container button:hover,
+.dark-mode .hours-calculator-container button:hover {
+    background-color: #003f7f; /* Even darker shade on hover */
 }

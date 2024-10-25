@@ -60,3 +60,26 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     background-color: #fff; /* White background for each div */
 }
+
+.dark-mode .currency-converter-container {
+    background-color: #333; /* Dark background */
+    color: #f9f9f9; /* Light text color */
+    border: 1px solid #444; /* Darker border */
+}
+
+.dark-mode .currency-converter-container button {
+    background-color: #0056b3; /* Darker button color */
+}
+
+.dark-mode .currency-converter-container button:hover {
+    background-color: #003f7f; /* Even darker shade on hover */
+}
+
+.dark-mode .container {
+    background-color: #444; /* Darker background for container */
+}
+
+.dark-mode .container div {
+    background-color: #555; /* Darker background for each div */
+    border: 1px solid #666; /* Darker border */
+}
