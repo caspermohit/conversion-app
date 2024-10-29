@@ -27,7 +27,7 @@ const CalendarConverter = () => {
         switch (targetCalendar) {
             case 'nepali':
                 const nepaliDate = new NepaliDateConverter(date.toDate());
-                result = `${nepaliDate.getBS().day}/ ${nepaliDate.getBS().month}/ ${nepaliDate.getBS().year}BS`;
+                result = `${nepaliDate.getBS().date}/ ${nepaliDate.getBS().month}/ ${nepaliDate.getBS().year}BS`;
                 break;
             case 'hebrew':
                 result = date.format('jD jMMMM jYYYY');

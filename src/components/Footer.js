@@ -1,18 +1,18 @@
 // src/components/Footer.js
 import React from 'react';
-import './Footer.css'; // Ensure this CSS file contains styles for the footer section
-
+import './Footer.css';
 
 function Footer({ isDarkMode }) {
     return (
         <footer className={`footer ${isDarkMode ? 'footer--dark' : ''}`}>
-            <p className="footer__title">Mohit Shah</p>
+            <h2 className="footer__title">Mohit Shah</h2>
             <div className="footer__social">
                 <a 
                     href="https://www.facebook.com/?ref=tn_tnmn" 
                     className="footer__icon" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    aria-label="Facebook"
                 >
                     <i className='bx bxl-facebook'></i>
                 </a>
@@ -21,6 +21,7 @@ function Footer({ isDarkMode }) {
                     className="footer__icon" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    aria-label="Instagram"
                 >
                     <i className='bx bxl-instagram'></i>
                 </a>
@@ -29,6 +30,7 @@ function Footer({ isDarkMode }) {
                     className="footer__icon" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    aria-label="Twitter"
                 >
                     <i className='bx bxl-twitter'></i>
                 </a>
@@ -37,6 +39,7 @@ function Footer({ isDarkMode }) {
                     className="footer__icon" 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                 >
                     <i className='bx bxl-linkedin'></i>
                 </a>
