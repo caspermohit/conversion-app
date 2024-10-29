@@ -4,6 +4,7 @@
     text-align: center;
     font-weight: var(--font-semi);
     padding: 2rem 0;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .footer__title {
