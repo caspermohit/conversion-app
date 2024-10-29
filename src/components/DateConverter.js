@@ -26,9 +26,27 @@ const CalendarConverter = () => {
         let result;
         switch (targetCalendar) {
             case 'nepali':
-                const nepaliDate = new NepaliDateConverter(date.toDate());
-                result = `${nepaliDate.getBS().date}/ ${nepaliDate.getBS().month}/ ${nepaliDate.getBS().year}BS`;
-                break;
+                try {
+                    const nepaliDate = new NepaliDateConverter(date.toDate());
+                    // Define Nepali month names
+                    const nepaliMonths = [
+                        'Baisakh', 'Jestha', 'Ashadh', 'Shrawan',
+                        'Bhadra', 'Ashwin', 'Kartik', 'Mangsir',
+                        'Poush', 'Magh', 'Falgun', 'Chaitra'
+                    ];
+                    
+                    // Get the BS date details
+                    const bsDate = nepaliDate.getBS();
+                   
+                    const monthName = nepaliMonths[bsDate.month ];
+                    
+                    result = `${bsDate.date} ${monthName} ${bsDate.year} BS`;
+                    break;
+                } catch (error) {
+                    console.error('Nepali calendar conversion error:', error);
+                    result = 'Date out of supported range';
+                    break;
+                }
             case 'hebrew':
                 result = date.format('jD jMMMM jYYYY');
                 break;
