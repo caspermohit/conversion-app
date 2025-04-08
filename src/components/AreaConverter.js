@@ -74,6 +74,7 @@ function AreaConverter() {
             <button className="clear-button" onClick={clearFields}>Clear</button>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <div className="converted-areas">
+                <h2>Converted Areas:</h2>
                 {convertedAreas.m2 && <p>Square Meters: {convertedAreas.m2} m²</p>}
                 {convertedAreas.cm2 && <p>Square Centimeters: {convertedAreas.cm2} cm²</p>}
                 {convertedAreas.mm2 && <p>Square Millimeters: {convertedAreas.mm2} mm²</p>}

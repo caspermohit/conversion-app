@@ -23,6 +23,13 @@
     border: 1px solid #ccc; /* Border for inputs */
     border-radius: 4px; /* Rounded corners */
 }
+.converted-lengths{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(33, 150, 243, 0.1);
+    transition: all 0.3s ease;
+}
 
 .convert-button,
 .clear-button {

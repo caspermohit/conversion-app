@@ -15,23 +15,12 @@
 }
 
 .hour-converter-container input,
-.hour-converter-container select,
-.hour-converter-container button {
+.hour-converter-container select {
     width: 100%; /* Full width for inputs and buttons */
     padding: 10px; /* Padding for better touch targets */
     margin: 10px 0; /* Margin for spacing */
     border: 1px solid #ccc; /* Border for inputs */
     border-radius: 4px; /* Rounded corners */
-}
-
-.hour-converter-container button {
-    background-color: #17a2b8; /* Button color */
-    color: white; /* Button text color */
-    cursor: pointer; /* Pointer cursor on hover */
-}
-
-.hour-converter-container button:hover {
-    background-color: #138496; /* Darker button color on hover */
 }
 
 .converted-hours {
@@ -66,22 +55,6 @@
     font-size: 16px;
 }
 
-.hours-calculator-container button {
-    width: 100%; /* Full width for buttons */
-    padding: 10px 15px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hours-calculator-container button:hover {
-    background-color: #0056b3;
-}
-
 .hours-calculator-container div {
     font-size: 18px;
     color: #333;
@@ -91,11 +64,20 @@
 .hours-calculator-container div.total {
     font-weight: bold;
 }
+.total{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(33, 150, 243, 0.1);
+    transition: all 0.3s ease;
+}
 
 .total-hours,
 .total-pay {
     margin-top: 20px;
     font-weight: bold;
+    font-size: 1.5rem;
+    color: #333;
 }
 
 .dark-mode .hour-converter-container,
@@ -105,12 +87,9 @@
     border: 1px solid #444; /* Darker border */
 }
 
-.dark-mode .hour-converter-container button,
-.dark-mode .hours-calculator-container button {
-    background-color: #0056b3; /* Darker button color */
-}
-
-.dark-mode .hour-converter-container button:hover,
-.dark-mode .hours-calculator-container button:hover {
-    background-color: #003f7f; /* Even darker shade on hover */
+.dark-mode input[type="time"],
+.dark-mode input[type="number"] {
+    background-color: #444;
+    color: #f9f9f9;
+    border: 1px solid #555;
 }

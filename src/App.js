@@ -8,27 +8,30 @@ import VolumeConverter from './components/VolumeConverter';
 import WeightConverter from './components/WeightConverter';
 import AreaConverter from './components/AreaConverter'; 
 import BasicCalculator from './components/BasicCalculator';
-import DarkModeToggle from './components/DarkModeToggle'; // Import the toggle component
+import DarkModeToggle from './components/DarkModeToggle';
 import Footer from './components/Footer';
 import './App.css';
 // Import other converters...
 
 const App = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false); // State for dark mode
-    const [activeTab, setActiveTab] = useState('Currency'); // State for active tab
+    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [activeTab, setActiveTab] = useState('Currency');
 
-    const toggleTheme = () => {
+    const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
+        document.body.classList.toggle('dark-mode');
     };
 
     const handleTabClick = (tabName) => {
-        setActiveTab(tabName); // Set the active tab
+        setActiveTab(tabName);
     };
 
     return (
         <div className={`multi-converter-container ${isDarkMode ? 'dark-mode' : 'light-mode'}`}>
             <h1>Multi Converter App</h1>
-            <DarkModeToggle isDarkMode={isDarkMode} toggleTheme={toggleTheme} /> {/* Add the toggle switch */}
+            <div className="dark-mode-toggle-container">
+                <DarkModeToggle isDarkMode={isDarkMode} onToggle={toggleDarkMode} />
+            </div>
             
             {/* Tabbed Interface for Converters */}
             <div className="tab">
@@ -44,7 +47,7 @@ const App = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="tabcontent">
+            <div className="converter-content">
                 {activeTab === 'Basic' && <BasicCalculator />}
                 {activeTab === 'Currency' && <CurrencyConverter />}
                 {activeTab === 'Date' && <DateConverter />}
@@ -54,8 +57,9 @@ const App = () => {
                 {activeTab === 'Volume' && <VolumeConverter />}
                 {activeTab === 'Weight' && <WeightConverter />}
                 {activeTab === 'Area' && <AreaConverter />}
-                <Footer />
             </div>
+            
+            <Footer />
         </div>
     );
 };

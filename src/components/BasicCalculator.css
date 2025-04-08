@@ -19,21 +19,6 @@ input {
     font-size: 16px; /* Font size */
 }
 
-button {
-    padding: 10px;
-    margin-right: 5px;
-    border: none;
-    border-radius: 4px; /* Rounded corners */
-    background-color: #2196F3; /* Primary button color */
-    color: white; /* Text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition */
-}
-
-button:hover {
-    background-color: #1976D2; /* Darker shade on hover */
-}
-
 h3 {
     margin-top: 20px;
     color: #333; /* Dark text color */
@@ -61,14 +46,6 @@ li {
     background-color: #444; /* Dark input background */
     color: #f9f9f9; /* Light text color */
     border: 1px solid #555; /* Darker border */
-}
-
-.dark-mode button {
-    background-color: #1e88e5; /* Darker primary button color */
-}
-
-.dark-mode button:hover {
-    background-color: #1565c0; /* Even darker shade on hover */
 }
 
 .dark-mode li {

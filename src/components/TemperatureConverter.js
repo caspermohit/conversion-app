@@ -72,6 +72,7 @@ function TemperatureConverter() {
             <button onClick={clearFields} className="clear-button">Clear</button>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <div className="converted-temperatures">
+                <h2>Converted Temperatures:</h2>
                 {convertedTemperatures.C !== undefined && `Celsius: ${convertedTemperatures.C.toFixed(2)} °C`}
                 <br />
                 {convertedTemperatures.K !== undefined && `Kelvin: ${convertedTemperatures.K.toFixed(2)} K`}

@@ -12,6 +12,13 @@
 .converter-title {
     text-align: center; /* Center the title */
 }
+.converted-areas{
+    margin-top: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 20px;
+    background-color: rgba(33, 150, 243, 0.1);
+    transition: all 0.3s ease;
+}
 
 .area-input,
 .unit-select,

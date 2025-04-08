@@ -71,6 +71,7 @@ function WeightConverter() {
             <button onClick={clearFields} className="clear-button">Clear</button>
             {errorMessage && <p className="error-message">{errorMessage}</p>}
             <div className="converted-weights">
+                <h2>Converted Weights:</h2>
                 {convertedWeights.mg && <p>Milligrams: {convertedWeights.mg} mg</p>}
                 {convertedWeights.g && <p>Grams: {convertedWeights.g} g</p>}
                 {convertedWeights.kg && <p>Kilograms: {convertedWeights.kg} kg</p>}

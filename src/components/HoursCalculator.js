@@ -49,8 +49,10 @@ function HoursCalculator() {
             <input type="number" value={taxRate} onChange={(e) => setTaxRate(e.target.value)} placeholder="Tax Rate (%)" />
             <button onClick={calculateHours}>Calculate</button>
             <button onClick={clearFields}>Clear</button>
-            <div className="total">Total Hours: {totalHours.toFixed(2)} hours</div>
-            <div className="total">Total Pay: ${totalPay.toFixed(2)}</div>
+            <div className="total">
+                <div className="total-hours">Total Hours: {totalHours.toFixed(2)} hours</div>
+                <div className="total-pay">Total Pay: ${totalPay.toFixed(2)}</div>
+            </div>
         </div>
     );
 }
